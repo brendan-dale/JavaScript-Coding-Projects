@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfolio Site</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+ 
+<body class="Background">
+
+<!--navbar-->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a>
+		<a href="#About">About</a>
+		<a href="#Github">Github</a>
+		<a href="#Contact">Contact</a>
+	</div>
+	
+<!--home-->
+		<br>
+		<br>
+		
+<!--video-->
+	<div id="Home">
+		<video autoplay muted loop id="Typing_Video">
+		<source src="./Videos/man_typing.mp4" type="video/mp4">
+		Your browser does not support HTML5 video.
+		</video>
+	</div>
+	
+<!--video text-->
+	<div class="Video_Text">
+		<h1 style="color:white;">BD Portfolio Page</h1>
+			<p>
+				<strong>
+					<center>
+						<q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+						<br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+						<br>field of battle and to command such unswervingly dutiful actors or troops.
+						</q>	
+						<br>-Joseph Weizenbaum<br>
+						<br>
+						Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
+						<br>Thank you for stopping by! 
+					</center>
+				</strong>
+			</p>
+	</div>
+	
+
+<!--lightbox-->
+<div class="row">
+  <div class="column">
+    <img src="Images/img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="Images/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="Images/img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="Images/img4.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="Images/img1.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="Images/img2.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="Images/img3.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="Images/img4.jpg" style="width:50%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="Images/img1.jpg" onclick="currentSlide(1)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="Images/img2.jpg" onclick="currentSlide(2)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="Images/img3.jpg" onclick="currentSlide(3)" alt="">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="Images/img4.jpg" onclick="currentSlide(3)" alt="">
+    </div>
+  </div>
+</div>
+
+
+<!--about section-->
+	<div class="Row" id="About">
+		<div class="Column_2"> <!--left-->
+			<img src="./Images/Development.jpg" alt="laptop">
+		</div>
+		
+		<div class="Column_1"> <!--right-->
+			<h1>About</h1>
+				<p>I am a software developer who loves to code. <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank"> The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack developer and currently fully booked with more projects than I can handle. <a href="#Contact">Contact</a> me below!</p>
+				
+			</div>
+		</div>
+		
+<!--GitHub section -->
+	<div class="Row" id="Github">
+		<div class="Column_1"> <!--left-->
+			<h1>GitHub</h1>
+				<p>You can view my coding projects on my GitHub profile here:<br>
+				<center><a href="https://github.com/brendan-dale" target="_blank">The Tech Academy GitHub</a></center></p>
+		</div>
+
+		<div class="Column_2"> <!--right-->
+			<a href="https://github.com/brendan-dale" target="blank"><img src="./Images/GitHub.png" alt="GitHub"></a>
+		</div>
+	</div>
+	
+<!-- Contact section -->
+	<div class="Row" id="Contact">
+		<div class="Column_3"> <!--contact left-->
+			<img src="./Images/Contact.jpg" alt="Contact_Image">
+		</div>
+		
+		<div class="Column_1"> <!--contact right-->
+			<h2>Contact</h2>
+				<form action="" method="get">
+					<label>Name:</label>
+						<input type="text" placeholder="Please enter your name here">
+					<label>Email:</label>
+						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+					<label>Message:</label>
+						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
+						<input type="submit" value="Submit">
+				</form>
+		</div>
+	</div>
+	
+	<footer>
+		<p>
+			<center>&copy; Prosper Consulting Inc., <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+		</p>
+	</footer>
+	   <script src="script.js"></script>
+		</body>
+		
+</html>
